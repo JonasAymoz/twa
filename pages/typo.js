@@ -13,26 +13,24 @@ export default function Home() {
         <h3>Heading 3</h3>
         <h4>Heading 4</h4>
         <h5>Heading 5</h5>
-        <p>Paragraph shit </p>
+        <p>Paragraph </p>
 
         <h1 className="second">Font Heading</h1>
         <h2 className="second">Heading 2</h2>
         <h3 className="second">Heading 3</h3>
         <h4 className="second">Heading 4</h4>
         <h5 className="second">Heading 5</h5>
-        <p>Paragraph shit </p>
+        <p>Paragraph </p>
 
         <h1 className="third">Font Heading</h1>
         <h2 className="third">Heading 2</h2>
         <h3 className="third">Heading 3</h3>
         <h4 className="third">Heading 4</h4>
         <h5 className="third">Heading 5</h5>
-        <p>Paragraph shit </p>
+        <p>Paragraph </p>
       </main>
 
-      <footer className={styles.footer}>
-        This is the footer : need to be a component
-      </footer>
+      <footer className={styles.footer}>This is the footer</footer>
     </div>
   );
 }
