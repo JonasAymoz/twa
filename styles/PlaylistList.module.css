@@ -1,0 +1,23 @@
+.playlistList {
+  flex: 1 1 100%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: calc(50vw - var(--headerPlaylist));
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Hide scrollbar in FF */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  max-height: 600px;
+}
+
+@media screen and (min-width: 1400px) {
+  .playlistList {
+    height: calc(600px - var(--headerPlaylist));
+    max-height: calc(600px - var(--headerPlaylist));
+  }
+}

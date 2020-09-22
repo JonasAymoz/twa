@@ -1,0 +1,83 @@
+.playlistItem {
+  flex: 1 1 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px 0 10px 10px;
+  min-height: min(80px);
+  min-height: min(100px);
+}
+.playlistItem:nth-child(even) {
+  background: #fefefeee;
+}
+.playlistItem:hover {
+  cursor: alias;
+}
+
+.titleContainer {
+  display: flex;
+  flex-direction: row;
+  transition: all 0, 3s ease;
+}
+
+.titleContainer:hover .line::after {
+  width: 100%;
+}
+
+.playlistTitle {
+  font-family: Right;
+  text-transform: uppercase;
+  float: left;
+  clear: left;
+  font-size: var(--text-lg);
+  z-index: 2;
+  transition: all 0.4s ease-in;
+  -moz-transition: all 0.4s ease-in;
+  -ms-transition: all 0.4s ease-in;
+  -o-transition: all 0.4s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  background-size: 300% 40%;
+  background-repeat: repeat-x;
+  background-position: left 100% bottom 10%;
+  background-image: linear-gradient(
+    120deg,
+    rgb(255, 241, 193) 0%,
+    rgb(255, 241, 193) 50%,
+    rgba(246, 112, 73, 0) 51%,
+    rgba(246, 112, 73, 0) 100%
+  );
+}
+.playlistTitle:hover {
+  background-size: 300% 40%;
+  background-repeat: repeat-x;
+  background-position: left 0% bottom 10%;
+}
+
+.line {
+  flex: 1 1 auto;
+  background: black;
+  height: 0px;
+  margin-top: 27px;
+  margin-left: 10px;
+  transition: all 0, 3s ease;
+}
+.line::after {
+  display: block;
+  content: "";
+  border-bottom: solid 2px black;
+  height: 3px;
+  position: relative;
+  width: 0%;
+  transition: width 0.3s ease;
+}
+
+.h3Container {
+  background: bisque;
+}
+
+.supTitle {
+  font-family: "Circular Std Book";
+  font-size: var(--text-sm);
+  position: relative;
+  transform: translateY(10px);
+}

@@ -1,0 +1,30 @@
+.header {
+  background: #fafafa;
+  height: var(--headerHeight);
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  padding: calc(var(--headerHeight) / 10);
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.014);
+  z-index: 2;
+}
+.logo {
+  height: calc(var(--headerHeight) / 3);
+  align-self: center;
+  display: flex;
+  justify-self: start;
+}
+.headerLink {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  transition: border-bottom 0.3s ease;
+  border-bottom: 4px solid transparent;
+}
+.headerLink h3 {
+  margin-top: 0;
+}
+.headerLink:hover {
+  border-bottom: 4px solid black;
+  cursor: pointer;
+}

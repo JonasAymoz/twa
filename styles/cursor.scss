@@ -1,0 +1,15 @@
+.cursor{
+    width: 10px;
+    height: 10px;
+    border: 2px solid #fefefe;
+    border-radius: 100%;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 9999;
+    mix-blend-mode: difference;
+  }
+  
+.cursor--hidden{
+    display: none;
+}
