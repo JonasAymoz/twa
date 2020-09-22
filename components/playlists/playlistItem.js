@@ -18,10 +18,10 @@ function PlaylistItem(props) {
   return (
     <div
       className={style.playlistItem}
-      onClick={() => showPlaylist()}
+      onClick={showPlaylist}
       onMouseEnter={() => setPlaylist(item)}
     >
-      <div className={style.supTitle}>&#6158; TWA #{item.id}</div>
+      <div className={style.supTitle}>&#6158; TWA #{item.playlistNumber}</div>
       <div className={style.titleContainer}>
         <div className={style.flexpart}>
           <span className={style.playlistTitle}>

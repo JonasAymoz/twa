@@ -118,6 +118,7 @@ img.cover {
   }
   .left {
     height: calc(100vh - (50vw + var(--headerHeight)));
+    padding: 0 0 0 10%;
   }
   .bottomInfos {
     display: none;

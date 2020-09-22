@@ -21,6 +21,7 @@ const QUERY = gql`
         formats
       }
       Spotify_link
+      playlistNumber
     }
   }
 `;
@@ -47,7 +48,8 @@ function Home() {
     setSelectedPlaylist(item);
   };
   const showPlaylist = () => {
-    setIsSlided(!isSlided);
+    console.log("hey");
+    setIsSlided(true);
   };
 
   if (error) return "Error loading playlists";

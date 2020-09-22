@@ -21,3 +21,9 @@
     max-height: calc(600px - var(--headerPlaylist));
   }
 }
+@media screen and (max-width: 600px) {
+  .playlistList {
+    height: calc(100vh - (50vw + var(--headerHeight)));
+    max-height: calc(100vh - (50vw + var(--headerHeight)));
+  }
+}

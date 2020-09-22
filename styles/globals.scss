@@ -16,6 +16,7 @@ body {
 
 .container {
   min-height: calc(100vh - var(--headerHeight));
+  height: calc(100vh - var(--headerHeight));
   padding: 0px;
   background: gray;
   display: flex;
@@ -29,6 +30,16 @@ body {
   .container {
     max-width: 1400px;
     margin: auto;
+  }
+}
+@media screen and (max-width: 600px) {
+  .container {
+    display: block;
+  }
+}
+@media screen and (max-width: 600px) {
+  .container {
+    display: block;
   }
 }
 
