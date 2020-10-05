@@ -124,7 +124,7 @@ function Home() {
             {selectedPlaylist.Cover && (
               <img
                 className={styles.cover}
-                src={`${process.env.NEXT_PUBLIC_API_URL}${selectedPlaylist.Cover.url}`}
+                src={selectedPlaylist.Cover.url}
                 alt=""
               />
             )}
