@@ -37,7 +37,7 @@ const item = {
 };
 
 function PlaylistList(props) {
-  const { setPlaylist, dataPlaylist, showPlaylist } = props;
+  const { setPlaylist, dataPlaylist, showPlaylist, showCover } = props;
   if (dataPlaylist && dataPlaylist.length) {
     //searchQuery
     const searchQuery = dataPlaylist.filter((query) =>
@@ -59,6 +59,7 @@ function PlaylistList(props) {
                   key={res.id}
                   setPlaylist={setPlaylist}
                   showPlaylist={showPlaylist}
+                  showCover={showCover}
                 />
               </motion.div>
             </>

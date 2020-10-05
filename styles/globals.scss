@@ -5,6 +5,7 @@
 :root {
   --headerHeight: 80px;
   --headerPlaylist: 140px;
+  --infoPlaylistHeight: 50px;
 }
 
 html,
@@ -17,24 +18,20 @@ body {
 .container {
   min-height: calc(100vh - var(--headerHeight));
   height: calc(100vh - var(--headerHeight));
-  padding: 0px;
+  padding: 0px 0px;
   background: gray;
   display: flex;
   flex-direction: column;
   justify-content: center;
   overflow-x: hidden;
   margin: 0;
+  flex: 1;
 }
 
 @media screen and (min-width: 1400px) {
   .container {
     max-width: 1400px;
     margin: auto;
-  }
-}
-@media screen and (max-width: 600px) {
-  .container {
-    display: block;
   }
 }
 @media screen and (max-width: 600px) {
@@ -73,6 +70,7 @@ h3 span::after {
   position: absolute;
   width: 50vw;
   height: 50vw;
+  max-height: 50vw;
   right: -50vw;
 }
 
@@ -84,7 +82,7 @@ h3 span::after {
   transform: translate3d(-50vw, 0px, 0px);
 }
 
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1700px) {
   .cover {
     max-width: 600px;
   }
@@ -95,9 +93,16 @@ h3 span::after {
   .slideCover {
     transform: translate3d(-600px, 0px, 0px);
   }
-
   .slideSpotify {
-    transform: translate3d(calc(50vw-600px), 0px, 0px);
+    --translate: calc(50vw - var(--infoPlaylistHeight));
+    transform: translate3d(-50vw, 0px, 0px);
+  }
+  .playerContainer {
+    height: calc(100vh - var(--headerHeight));
+    max-height: 600px;
+    width: 600px;
+    right: -600px;
+    top: 80px;
   }
 }
 
@@ -115,5 +120,16 @@ h3 span::after {
   }
   .slideCover {
     transform: translate3d(0vw, 0px, 0px);
+  }
+
+  .playerContainer {
+    height: calc(100vh - var(--headerHeight));
+    max-height: calc(100vh - var(--headerHeight));
+    width: 100vw;
+    right: -100vw;
+    top: 80px;
+  }
+  .slideSpotify {
+    transform: translate3d(-100vw, 0px, 0px);
   }
 }

@@ -22,6 +22,7 @@ const QUERY = gql`
       }
       Spotify_link
       playlistNumber
+      SpotifyEmbedUrl
     }
   }
 `;
@@ -44,7 +45,12 @@ function Home() {
     setIsSlided(!isSlided);
   };
 
+  const showCover = (item) => {
+    setSelectedPlaylist(item);
+  };
+
   const select = (item) => {
+    setIsSlided(!isSlided);
     setSelectedPlaylist(item);
   };
   const showPlaylist = () => {
@@ -55,7 +61,7 @@ function Home() {
   if (error) return "Error loading playlists";
   // if playlists are returned from the GraphQL query, run the filter query
   // and set equal to variable restaurantSearch
-  if (loading) return <h1>Fetching</h1>;
+  if (loading) return <p>Fetching</p>;
   if (error) {
     console.log("error fetching");
   }
@@ -95,6 +101,7 @@ function Home() {
             dataPlaylist={data.playlists}
             setPlaylist={select}
             showPlaylist={showPlaylist}
+            showCover={showCover}
           />
         </motion.div>
         <motion.div
@@ -109,7 +116,7 @@ function Home() {
             <h1 className={styles.title}>{selectedPlaylist.Nom}</h1>
           )}
           {isSlided && (
-            <h1 className={styles.title} onClick={() => slideItem()}>
+            <h1 className={styles.backArrow} onClick={() => slideItem()}>
               &larr;
             </h1>
           )}
@@ -143,7 +150,7 @@ function Home() {
           className={classNames("playerContainer", { slideSpotify: isSlided })}
         >
           <iframe
-            src="https://open.spotify.com/embed/playlist/0dj6QH5IPONE8GOHGS7u4K"
+            src={`https://open.spotify.com/embed/playlist/${selectedPlaylist.SpotifyEmbedUrl}`}
             width="100%"
             height="100%"
             frameborder="0"
@@ -157,3 +164,11 @@ function Home() {
 }
 
 export default Home;
+<iframe
+  src="https://open.spotify.com/embed/playlist/5gm7LN0zDtZlrvHopJZHei"
+  width="300"
+  height="380"
+  frameborder="0"
+  allowtransparency="true"
+  allow="encrypted-media"
+></iframe>;

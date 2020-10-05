@@ -4,8 +4,7 @@
   flex-direction: column;
   justify-content: center;
   padding: 10px 0 10px 10px;
-  min-height: min(80px);
-  min-height: min(100px);
+  min-height: min(60px);
 }
 .playlistItem:nth-child(even) {
   background: #fefefeee;

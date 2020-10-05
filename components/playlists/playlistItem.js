@@ -5,7 +5,7 @@ import React, { useState, useEffect } from "react";
 import style from "../../styles/PlaylistItem.module.css";
 
 function PlaylistItem(props) {
-  const { item, setPlaylist, showPlaylist, playlistsJson } = props;
+  const { item, setPlaylist, showPlaylist, playlistsJson, showCover } = props;
   const [data, setData] = useState("");
   useEffect(() => {
     const fetchData = async () => {
@@ -18,8 +18,8 @@ function PlaylistItem(props) {
   return (
     <div
       className={style.playlistItem}
-      onClick={showPlaylist}
-      onMouseEnter={() => setPlaylist(item)}
+      onClick={() => setPlaylist(item)}
+      onMouseEnter={() => showCover(item)}
     >
       <div className={style.supTitle}>&#6158; TWA #{item.playlistNumber}</div>
       <div className={style.titleContainer}>

@@ -1,20 +1,32 @@
-$fontPath: '../public/fonts/';
+$fontPath: "../public/fonts/";
 
-@font-face {font-family: "Circular Std Book";
-  src: url($fontPath+"CircularStd/860c3ec7bbc5da3e97233ccecafe512e.eot"); /* IE9*/
-  src: url($fontPath+"CircularStd/860c3ec7bbc5da3e97233ccecafe512e.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
-  url($fontPath+"CircularStd/860c3ec7bbc5da3e97233ccecafe512e.woff2") format("woff2"), /* chrome、firefox */
-  url($fontPath+"CircularStd/860c3ec7bbc5da3e97233ccecafe512e.woff") format("woff"), /* chrome、firefox */
-  url($fontPath+"CircularStd/860c3ec7bbc5da3e97233ccecafe512e.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-  url($fontPath+"CircularStd/860c3ec7bbc5da3e97233ccecafe512e.svg#Circular Std Book") format("svg"); /* iOS 4.1- */
+@font-face {
+  font-family: "Circular Std Book";
+  src: url($fontPath + "CircularStd/860c3ec7bbc5da3e97233ccecafe512e.eot"); /* IE9*/
+  src: url($fontPath + "CircularStd/860c3ec7bbc5da3e97233ccecafe512e.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */
+      url($fontPath + "CircularStd/860c3ec7bbc5da3e97233ccecafe512e.woff2")
+      format("woff2"),
+    /* chrome、firefox */
+      url($fontPath + "CircularStd/860c3ec7bbc5da3e97233ccecafe512e.woff")
+      format("woff"),
+    /* chrome、firefox */
+      url($fontPath + "CircularStd/860c3ec7bbc5da3e97233ccecafe512e.ttf")
+      format("truetype"),
+    /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+      url($fontPath + "CircularStd/860c3ec7bbc5da3e97233ccecafe512e.svg#Circular Std Book")
+      format("svg"); /* iOS 4.1- */
 }
 
-@font-face {font-family: "Sporting";
-  src: url($fontPath+"SportingGrotesque-Regular.otf");
+@font-face {
+  font-family: "Sporting";
+  src: url($fontPath + "SportingGrotesque-Regular.otf");
 }
 
-@font-face {font-family: "Right";
-  src: url($fontPath+"RightGrotesk-TightMedium.otf");
+@font-face {
+  font-family: "Right";
+  src: url($fontPath + "RightGrotesk-TightMedium.otf");
 }
 
 :root {
@@ -30,9 +42,19 @@ $fontPath: '../public/fonts/';
   --text-sm: calc(1em / var(--text-scale-ratio));
   --text-md: calc(1em * var(--text-scale-ratio));
   --text-lg: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio));
-  --text-xl: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
-  --text-xxl: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
-  --text-xxxl: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
+  --text-xl: calc(
+    1em * var(--text-scale-ratio) * var(--text-scale-ratio) *
+      var(--text-scale-ratio)
+  );
+  --text-xxl: calc(
+    1em * var(--text-scale-ratio) * var(--text-scale-ratio) *
+      var(--text-scale-ratio) * var(--text-scale-ratio)
+  );
+  --text-xxxl: calc(
+    1em * var(--text-scale-ratio) * var(--text-scale-ratio) *
+      var(--text-scale-ratio) * var(--text-scale-ratio) *
+      var(--text-scale-ratio)
+  );
 }
 
 body {
@@ -41,7 +63,11 @@ body {
   color: var(--color-text);
 }
 
-h1, h2, h3, h4, form legend {
+h1,
+h2,
+h3,
+h4,
+form legend {
   color: var(--color-text-heading);
   margin-bottom: var(--space-xxs);
   line-height: var(--heading-line-height);
@@ -52,23 +78,28 @@ h1, h2, h3, h4, form legend {
   font-size: var(--text-xxxl);
 }
 
-h1, .text--xxl {
+h1,
+.text--xxl {
   font-size: var(--text-xxl);
 }
 
-h2, .text--xl {
+h2,
+.text--xl {
   font-size: var(--text-xl);
 }
 
-h3, .text--lg {
+h3,
+.text--lg {
   font-size: var(--text-lg);
 }
 
-h4, .text--md {
+h4,
+.text--md {
   font-size: var(--text-md);
 }
 
-.text--sm, small {
+.text--sm,
+small {
   font-size: var(--text-sm);
 }
 
@@ -80,12 +111,25 @@ p {
   line-height: var(--body-line-height);
 }
 
-
 /* Font family */
 
-h1.second, h2.second, h3.second, h4.second, h5.second {
+h1.second,
+h2.second,
+h3.second,
+h4.second,
+h5.second {
   font-family: Sporting;
 }
-h1.third, h2.third, h3.third, h4.third, h5.third {
+h1.third,
+h2.third,
+h3.third,
+h4.third,
+h5.third {
   font-family: Right;
+}
+
+@media screen and (max-width: 600px) {
+  :root {
+    --text-scale-ratio: 1.2;
+  }
 }

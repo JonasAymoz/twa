@@ -69,65 +69,63 @@ const Home = (props) => {
   }, []);
 
   return (
-    <motion.div exit={{ opacity: 0 }}>
-      <div className="container">
-        <main className={styles.main}>
-          <motion.div
-            animate="animate"
-            initial="initial"
-            variants={container}
-            className={styles.hero}
-            transition={{ staggerChildren: 0.12 }}
-          >
-            <motion.img
-              initial={{ x: -2000, rotateZ: 0 }}
-              animate={anim}
-              src="/roundLogo.png"
-              alt="logo"
-              className={styles.roundLogo}
-            />
+    <motion.div exit={{ opacity: 0 }} className="container">
+      <main className={styles.main}>
+        <motion.div
+          animate="animate"
+          initial="initial"
+          variants={container}
+          className={styles.hero}
+          transition={{ staggerChildren: 0.12 }}
+        >
+          <motion.img
+            initial={{ x: -2000, rotateZ: 0 }}
+            animate={anim}
+            src="/roundLogo.png"
+            alt="logo"
+            className={styles.roundLogo}
+          />
 
-            <div>
-              <motion.h1
-                variants={fadeInUp}
-                className={classNames("second", styles.mainTitle)}
-              >
-                the Way <br />
-                Around
-              </motion.h1>
-              <motion.p variants={opacity}>
-                Hand picked music
-                <Link href="playlists">&rarr; press play.</Link>
-              </motion.p>
-            </div>
-            {props.hello}
-          </motion.div>
-          <motion.div variants={fadeInUp} className={styles.hero}>
-            <svg
-              className={styles.svg}
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 100 100"
-              preserveAspectRatio="none"
+          <div>
+            <motion.h1
+              variants={fadeInUp}
+              className={classNames("second", styles.mainTitle)}
             >
-              <polygon fill="#FAFAFA" points="0,100 100,0 0,0" />
-            </svg>
-            <div className={styles.secondHero}>
-              <h1 className="second">We love music</h1>
-              {props.secondSubtitle}
-              <p>
-                <Link href="/playlists">&rarr; See the playlists </Link>
-              </p>
-            </div>
-          </motion.div>
-        </main>
-      </div>
+              the Way <br />
+              Around
+            </motion.h1>
+            <motion.p variants={opacity}>
+              Hand picked music
+              <Link href="playlists">&rarr; press play.</Link>
+            </motion.p>
+          </div>
+          {props.hello}
+        </motion.div>
+        <motion.div variants={fadeInUp} className={styles.hero}>
+          <svg
+            className={styles.svg}
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 100 100"
+            preserveAspectRatio="none"
+          >
+            <polygon fill="#FAFAFA" points="0,100 100,0 0,0" />
+          </svg>
+          <div className={styles.secondHero}>
+            <h1 className="second"> love music</h1>
+            {props.secondSubtitle}
+            <p>
+              <Link href="/playlists"> &rarr; See the playlists </Link>
+            </p>
+          </div>
+        </motion.div>
+      </main>
     </motion.div>
   );
 };
 
 export const getStaticProps = () => ({
   props: {
-    secondSubtitle: "And then we share it, with you.",
+    secondSubtitle: "And then we share it with you.",
     random: Math.random(),
   },
 });

@@ -1,7 +1,8 @@
 .header {
-  background: #fafafa;
+  background: cornsilk;
   height: var(--headerHeight);
   display: flex;
+  flex: 1 1 auto;
   justify-content: space-around;
   align-content: center;
   padding: calc(var(--headerHeight) / 10);
@@ -27,4 +28,10 @@
 .headerLink:hover {
   border-bottom: 4px solid black;
   cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+  .header {
+    max-width: 100vw;
+  }
 }

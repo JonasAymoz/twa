@@ -28,7 +28,7 @@ const pageLeft = {
 export default function Contact() {
   return (
     <motion.div initial="init" animate="anim" exit="exit" variants={pageLeft}>
-      <div className="container">
+      <div className={styles.container}>
         <main className={styles.main}>
           <h1 className="third">Contact</h1>
           <p>twa@gmail.com</p>

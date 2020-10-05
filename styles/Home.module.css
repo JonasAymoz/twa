@@ -1,6 +1,5 @@
 .main {
-  padding: 0;
-  flex: 1;
+  flex: 1 1 auto;
   background: #fafafa;
   display: flex;
   flex-direction: column;
@@ -28,6 +27,7 @@
 }
 .secondHero {
   padding: 0 6em;
+  min-height: 500px;
 }
 
 .logo {
